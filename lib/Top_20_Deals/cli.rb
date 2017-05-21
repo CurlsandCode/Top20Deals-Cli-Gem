@@ -1,7 +1,7 @@
 class Top20Deals::CLI
     
     def call
-        Top50Fares::Scraper.new.make_deal
+        Top20Deals::Scraper.new.make_deals
         list_deals
         menu
         goodbye
