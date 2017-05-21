@@ -1,5 +1,3 @@
-require "Top_20_Deals/version"
+require_relative "./Top_20_Deals/version"
+require_relative "./Top_20_Deals/cli"
 
-module Top20Deals
-  # Your code goes here...
-end

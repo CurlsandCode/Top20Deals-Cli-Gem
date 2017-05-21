@@ -1,0 +1,6 @@
+#!/usr/bin/env ruby
+
+require "bundler/setup"
+require "Top_20_Deals"
+
+Top20Deals::CLI.new.call
