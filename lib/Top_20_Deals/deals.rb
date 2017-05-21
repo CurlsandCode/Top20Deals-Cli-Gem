@@ -12,4 +12,7 @@ class Top20Deals::Deals
         @@all << self
     end
     
+    def self.all
+        @@all
+    end
 end
