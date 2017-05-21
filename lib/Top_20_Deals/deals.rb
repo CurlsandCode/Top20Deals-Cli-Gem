@@ -18,9 +18,9 @@ class Top20Deals::Deals
     
     def self.new_from_index_page(deal)
         self.new(
-            deal.css('span.deal-headline-text').text.strip
-            deal.css('p.h6.deal-location').text.strip
-            deal.css('span.deal-headline-price').text.strip
+            deal.css('span.deal-headline-text').text.strip,
+            deal.css('p.h6.deal-location').text.strip,
+            deal.css('span.deal-headline-price').text.strip,
             deal.css('p.deal-summary').text.strip
             )
     end

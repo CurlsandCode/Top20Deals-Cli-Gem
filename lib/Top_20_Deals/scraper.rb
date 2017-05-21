@@ -1,7 +1,7 @@
-Class Top20Deals::Deals
+class Top20Deals::Scraper
 
     def get_page
-     Nokogiri::HTML(open("https://www.travelzoo.com.top20/"))
+     Nokogiri::HTML(open("https://www.travelzoo.com.top20/")) 
     end
 
      def scrape_travelzoo_index
@@ -12,4 +12,5 @@ Class Top20Deals::Deals
       scrape_travelzoo_index.each do |deal|
       Top20Deals::Deals.new_from_index_page(deal)
       end
+    end
 end
