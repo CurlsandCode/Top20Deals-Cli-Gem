@@ -4,8 +4,7 @@ class Top20Deals::CLI
         Top20Deals::Scraper.new.make_deals
         list_deals
         menu
-        goodbye
-    end
+     end
     
     def list_deals
          puts "Hi! Here are this weeks Top 20 Travel Deals:"
@@ -20,7 +19,8 @@ class Top20Deals::CLI
         while input != "exit"
          puts "Enter the number (1-20) of the deal you would like more information on. Or type 'list' to see the list again or 'exit'."
             input = gets.strip.downcase
-            if input.to_i >0 && input.to_i <= 20
+            
+            if input.to_i > 0 && input.to_i <= 20
                 the_deal = @deals[input.to_i]
                 puts "#{the_deal.title} - #{the_deal.place} - #{the_deal.price} - #{the_deal.description}"
                 elsif input == "list"
