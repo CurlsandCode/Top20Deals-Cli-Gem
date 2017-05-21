@@ -21,7 +21,7 @@ class Top20Deals::CLI
             input = gets.strip.downcase
             
             if input.to_i > 0 && input.to_i <= 20
-                the_deal = @deals[input.to_i]
+                the_deal = @deals[input.to_i-1]
                 puts "#{the_deal.title} - #{the_deal.place} - #{the_deal.price} - #{the_deal.description}"
                 elsif input == "list"
                 list_deals
