@@ -20,15 +20,15 @@ class Top20Deals::CLI
          puts "Enter the number (1-20) of the deal you would like more information on. Or type 'list' to see the list again or 'exit'."
             input = gets.strip.downcase
             
-            if input.to_i > 0 && input.to_i <= 20
-                the_deal = @deals[input.to_i-1]
+            if input.to_i > 0 && input.to_i-1 <= 20
+                the_deal = Top20Deals::Deals.find(input.to_i - 1)
                 puts "#{the_deal.title} - #{the_deal.place} - #{the_deal.price} - #{the_deal.description}"
                 elsif input == "list"
                 list_deals
                 elsif input == "exit"
                 goodbye
                 else
-                "Opps try again, invalid entry!"
+                puts "Opps try again, invalid entry!"
            end
         end
     end
